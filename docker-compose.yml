@@ -1,0 +1,9 @@
+version: '2.2'
+services:
+  kompago:
+    image: tracon/kompago
+    build: .
+    environment:
+      AMQP_URL: amqp://guest:guest@rabbitmq/
+    external_links:
+      - kompassi_rabbitmq_1:rabbitmq
